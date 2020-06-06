@@ -21,13 +21,19 @@ const RetriveData = async () => {
       return dataJSON
     } else {
       console.log('No data to retrive')
+      return []
     }
   } catch (error) {
     console.log('Error retriving data')
   }
 }
 
+const ClearData = async () => {
+  AsyncStorage.clear()
+}
+
 export default {
   SaveData,
   RetriveData,
+  ClearData,
 }

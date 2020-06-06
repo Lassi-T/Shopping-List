@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, StatusBar, View, FlatList, Alert, AsyncStorage } from 'react-native'
+import { StyleSheet, StatusBar, View, FlatList, Alert } from 'react-native'
 import Item from './components/Item'
 import Header from './components/Header'
 import AddItem from './components/AddItem'
+import Clear from './components/Clear'
 import Storage from './components/Storage'
 
 const styles = StyleSheet.create({
@@ -41,6 +42,7 @@ const App = () => {
       <Header />
       <FlatList data={items} renderItem={({ item }) => <Item item={item} deleteItem={deleteItem} />} />
       <AddItem items={items} addItem={addItem} />
+      <Clear setItems={setItems} />
     </View>
   )
 }
