@@ -3,13 +3,12 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Storage from './Storage'
 
-const AddItem = ({ items, addItem }) => {
+const AddItem = ({ addItem }) => {
   const [text, setText] = useState('')
 
   const onPress = () => {
     addItem(text)
     setText('')
-    Storage.SaveData(items)
   }
 
   return (

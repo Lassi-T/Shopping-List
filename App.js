@@ -26,8 +26,9 @@ const App = () => {
     } else {
       setItems((prevItems) => {
         setId(id + 1)
-        const newItem = { id: id, text }
-        return [...prevItems, newItem]
+        const newItems = [...prevItems, { id: id + 1, text }]
+        Storage.SaveData(newItems)
+        return newItems
       })
     }
   }
@@ -41,7 +42,7 @@ const App = () => {
       <StatusBar backgroundColor='#27c408' />
       <Header />
       <FlatList data={items} renderItem={({ item }) => <Item item={item} deleteItem={deleteItem} />} />
-      <AddItem items={items} addItem={addItem} />
+      <AddItem addItem={addItem} />
       <Clear setItems={setItems} />
     </View>
   )
