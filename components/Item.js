@@ -24,7 +24,7 @@ const Item = ({ item, deleteItem }) => {
     <TouchableOpacity style={styles.item}>
       <View style={styles.itemView}>
         <Text style={styles.itemText}>{item.text}</Text>
-        <Icon name='remove' size={20} color='firebrick' onPress={() => deleteItem(item.id)}/>
+        <Icon name='remove' size={25} color='firebrick' onPress={() => deleteItem(item.id)}/>
       </View>
     </TouchableOpacity>
   )

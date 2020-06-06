@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Shopping-List",
+    "name": "Shopping List",
     "slug": "Shopping-List",
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
@@ -10,6 +10,10 @@
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.yourcompany.yourappname",
+      "versionCode": 1
     },
     "updates": {
       "fallbackToCacheTimeout": 0
